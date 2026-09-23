@@ -1,18 +1,18 @@
 /*Aqui empieza lo del Header*/
 :root{
-    --gsn: #533745;
-    --gsn-claro: #C58194;
-    --gsn-oscuro: #49313D;
-	--bg-gris:#D3D3D3;
-	--bg-blanco: #fff
-    --texto-nav: #fff;
-    --linea-fin: #fff;
+  --gsn: #533745;
+  --gsn-claro: #C58194;
+  --gsn-oscuro: #49313D;
+  --bg-gris:#D3D3D3;
+  --bg-blanco: #fff
+  --texto-nav: #fff;
+  --linea-fin: #fff;
 }
 *{
 	margin:0px;
 	padding:0px;
 	box-sizing: border-box;
-	font-family: roboto;	
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;	
 	background-color: var(--bg-blanco);
 }
 .navbar{
@@ -61,7 +61,7 @@
 	height:100%;
 	padding:30px 2px;
 	position: relative;
-    transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .navbar ul li::before{
     content: "";
@@ -70,7 +70,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, var(--gsn-claro), var(--linea-fin));
+    background: linear-gradient(to right, var(--gsn-claro), var(--gsn-claro));
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-in-out;
@@ -110,39 +110,3 @@
   width:35vw;
   text-align: left;
 }
-
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} 
