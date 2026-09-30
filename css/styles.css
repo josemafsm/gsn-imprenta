@@ -3,8 +3,10 @@
   --gsn: #533745;
   --gsn-claro: #C58194;
   --gsn-oscuro: #49313D;
-  --bg-gris:#D3D3D3;
+  --bg-gris-claro:#eeeeee;
+  --bg-gris:#e2e1e1;
   --bg-gris-oscuro:#4f4f55;
+  --bg-gris-mas-oscuro:#28282c;
   --bg-blanco: #fff;
   --linea-fin: #fff;
 }
@@ -14,11 +16,12 @@
 	box-sizing: border-box;
 	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;	
 }
-html {
+/* html {
   overflow-y: scroll;
-}
+} */
 html, body {
     height: 100%;
+    scrollbar-gutter: stable;
 }
 body {
     min-height: 100vh;
@@ -39,7 +42,7 @@ main {
 	/* background-color: var(--gsn); */
 	padding:0px 250px;
 	/* padding:18px 100px; */
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid var(--bg-gris);
   min-height: 90px;
 }
 .navbar .logo{
@@ -113,7 +116,7 @@ main {
   height: 80vh;
   position: relative;
   text-align: center;
-  color: white;
+  color: var(--bg-blanco);
   /* align-items: center; */
   overflow:hidden;
   background-color: black;
@@ -135,16 +138,20 @@ main {
   width:35vw;
   text-align: left;
 }
+/*Sobre nosotros*/
+.sobre-nosotros{
+  margin: 0vw 10vw;
+}
 
 /*Aqui empieza Footer*/
 
 
 footer {
-    background-color: #f8f9fa; /* Un fondo gris muy claro (cambialo si prefieres oscuro) */
-    color: #333333;            /* Texto gris oscuro para que sea legible */
+    background-color: var(--bg-gris-claro); /* Un fondo gris muy claro (cambialo si prefieres oscuro) */
+    color: var(--bg-gris-mas-oscuro);            /* Texto gris oscuro para que sea legible */
     padding: 10px 0px;        /* Espacio arriba y abajo */
     font-family: sans-serif;
-    border-top: 1px solid #e9ecef; /* Una línea sutil para separarlo del resto de la página */
+    border-top: 1px solid var(--bg-gris); /* Una línea sutil para separarlo del resto de la página */
 }
 
 .footer{
@@ -177,11 +184,15 @@ footer {
 
 .footer-subtext2 {
   font-size: 12px;
-  color: var(--bg-gris);
+  color: var(--bg-gris-oscuro);
   margin: 0;
 }
 
-@media (max-width:700px){
+@media (max-width:700px){  
+  html {
+    overflow-x: hidden;
+  }
+
   .navbar{
     padding:0;
     display:block;
